@@ -92,7 +92,7 @@ Your code should look more like this:
   "provisioners": [{
     "type": "shell",
     "inline": [
-      "git clone --branch <MODULE_VERSION> https://github.com/hashicorp/terraform-aws-vault.git /tmp/terraform-aws-vault",
+      "git clone --branch v0.13.11 https://github.com/hashicorp/terraform-aws-vault.git /tmp/terraform-aws-vault",
       "/tmp/terraform-aws-vault/modules/install-vault/install-vault --version {{user `vault_version`}}"
     ],
     "pause_before": "30s"
