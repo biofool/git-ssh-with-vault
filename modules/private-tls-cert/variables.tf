@@ -5,22 +5,22 @@
 
 variable "ca_public_key_file_path" {
   description = "Write the PEM-encoded CA certificate public key to this path (e.g. /etc/tls/ca.crt.pem)."
-  default     = "/Users/ashishbaiju/.certauth/insightab/ca_public_key.pem"
+  default     = "/home/vagrant/.certauth/secureyourdata/ca_public_key.pem"
 }
 
 variable "public_key_file_path" {
   description = "Write the PEM-encoded certificate public key to this path (e.g. /etc/tls/vault.crt.pem)."
-  default     = "/Users/ashishbaiju/.certauth/insightab/public_key.pem"
+  default     = "/home/vagrant/.certauth/secureyourdata/public_key.pem"
 }
 
 variable "private_key_file_path" {
   description = "Write the PEM-encoded certificate private key to this path (e.g. /etc/tls/vault.key.pem)."
-  default     = "/Users/ashishbaiju/.certauth/insightab/private_key.pem"
+  default     = "/home/vagrant/.certauth/secureyourdata/private_key.pem"
 }
 
 variable "owner" {
   description = "The OS user who should be given ownership over the certificate files."
-  default     = "ashishbaiju"
+  default     = "vagrant"
 }
 
 variable "organization_name" {
@@ -30,18 +30,18 @@ variable "organization_name" {
 
 variable "ca_common_name" {
   description = "The common name to use in the subject of the CA certificate (e.g. acme.co cert)."
-  default     = "insight-ab.net"
+  default     = "secureyourdata.org"
 }
 
 variable "common_name" {
   description = "The common name to use in the subject of the certificate (e.g. acme.co cert)."
-  default     = "insight-ab.net"
+  default     = "secureyourdata.org"
 }
 
 variable "dns_names" {
   description = "List of DNS names for which the certificate will be valid (e.g. vault.service.consul, foo.example.com)."
   type        = list(string)
-  default     = ["vault.insight-ab.net"]
+  default     = ["vault.secureyourdata.org"]
 }
 
 variable "ip_addresses" {
